@@ -1,36 +1,36 @@
 
 (function(){
-	const path = require('path');
-	const TRIE_DS = require( path.resolve( __dirname, "./ds-trie/index.js" ) );
-	const rl = require( path.resolve( __dirname, "./readline") ).default;
+    const path = require('path');
+    const TRIE_DS = require( path.resolve( __dirname, "./ds-trie/index.js" ) );
+    const rl = require( path.resolve( __dirname, "./readline") ).default;
 
-	const askQuestions = () => {
-		rl.question('\n\nWhat do you want to run?\n1) Trie Data Structure.\n0) Exit\n:', (value) => {
-		    let option = parseInt(value);
+    const askQuestions = () => {
+        rl.question('\n\nWhat do you want to run?\n1) Trie Data Structure.\n0) Exit\n:', (value) => {
+            let option = parseInt(value);
 
-		    switch(option) {
-		    	case 0: 
-		    		rl.close();
-		    		break;
+            switch(option) {
+                case 0:
+                    rl.close();
+                    break;
 
-		    	case 1: 
-		    		TRIE_DS.init();
-		    		break;
+                case 1:
+                    TRIE_DS.init();
+                    break;
 
-		    	default:
-		    		console.log("Invalid choice!!\n");
-		    		askQuestions();
-		    }
-		});
-	};
+                default:
+                    console.log("Invalid choice!!\n");
+                    askQuestions();
+            }
+        });
+    };
 
-	const init = () => {
-		askQuestions();
-	};
+    const init = () => {
+        askQuestions();
+    };
 
-	init();
+    init();
 
-	module.exports = {
-		default: init
-	};
+    module.exports = {
+        default: init
+    };
 })();

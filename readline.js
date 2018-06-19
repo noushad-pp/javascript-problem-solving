@@ -6,5 +6,5 @@ const rl = readline.createInterface({
 });
 
 module.exports = {
-	default: rl
+    default: rl
 };
