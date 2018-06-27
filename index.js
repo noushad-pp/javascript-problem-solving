@@ -4,9 +4,15 @@
     const rl = require(path.resolve(__dirname, "./readline")).default;
     const TRIE_DS = require(path.resolve(__dirname, "./ds-trie/index.js"));
     const BST_DS = require(path.resolve(__dirname, "./ds-binary-search-tree/index.js"));
+    const HANOI_PS = require(path.resolve(__dirname, "./ps-tower-of-hanoi/index.js"));
 
     const askQuestions = () => {
-        rl.question('\n\nWhat do you want to run?\n1) Trie Data Structure.\n2) Binary Search Tree.\n0) Exit\n:', (value) => {
+        rl.question(`\n\nWhat do you want to run?\n
+            1) Trie Data Structure.\n
+            2) Binary Search Tree.\n
+            3) Tower of Hanoi\n
+            0) Exit\n:`,
+        (value) => {
             let option = parseInt(value);
 
             switch(option) {
@@ -20,6 +26,10 @@
 
                 case 2:
                     BST_DS.init();
+                    break;
+
+                case 3:
+                    HANOI_PS.init();
                     break;
 
                 default:
