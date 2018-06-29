@@ -94,7 +94,7 @@
                     }
                     towers.printTowerStack();
 
-                    console.log(chalk.bgBlue('\n\nStarting shuffling.....\n\n'))
+                    console.log(chalk.bgBlue('\n\nStarting shuffling.....\n\n'));
                     printHanoiTower(towers, option, towers.fromTower, towers.toTower, towers.auxTower);
                     askQuestions();
                 }
